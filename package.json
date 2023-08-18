@@ -1,0 +1,20 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "api": "npm start --workspace=server",
+    "start": "concurrently \"npm run api\" \"npm start --workspace=app \""
+  },
+  "author": "Anastasiia Sliusar",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.4.0",
+    "json-server": "^0.16.1"
+  },
+  "workspaces": [
+    "server",
+    "app"
+  ]
+}
